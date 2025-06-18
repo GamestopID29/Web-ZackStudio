@@ -49,7 +49,7 @@
       <p>
         Temukan berbagai proyek premium dan eksklusif dari ZackCraft Studio.
       </p>
-      <a href="#categories" class="cta-button">Lihat Proyek</a>
+      <a onclick="scrollToOffset(600)" class="cta-button">Lihat Proyek</a>
     </section>
 
     <!-- Divider antara section 1 dan 2 -->
@@ -469,7 +469,7 @@
         <a href="https://github.com/GamestopID29" target="_blank" aria-label="GitHub">
           <i data-feather="github"></i>
         </a>
-        <a href="https://instagram.com/officialgamestop.id" target="_blank" aria-label="Instagram">
+        <a href="https://instagram.com/officialgamestop.id/>igsh=MTZvZXM3MTlubTVzcw==" target="_blank" aria-label="Instagram">
           <i data-feather="instagram"></i>
         </a>
         <a href="https://discord.gg/4jjKrxPq" target="_blank" aria-label="Discord">
@@ -481,17 +481,18 @@
       </div>
     </div>
   </div>
-
-  <!-- Diletakkan di luar .footer-top agar tidak kena efek flex -->
-  <div class="footer-bottom">
-    <p>© 2025 ZackCraftStudio. All rights reserved</p>
-  </div>
-</footer>
-
     <script src="script.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
     <script>
       feather.replace();
     </script>
+    <script>
+  function scrollToOffset(offset) {
+    window.scrollTo({
+      top: offset,
+      behavior: "smooth"
+    });
+  }
+</script>
   </body>
 </html>

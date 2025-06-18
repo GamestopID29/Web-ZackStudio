@@ -195,3 +195,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+function scrollToOffset(offset) {
+  const current = window.scrollY || document.documentElement.scrollTop;
+  window.scrollTo({
+    top: current + offset,
+    behavior: "smooth",
+  });
+}
