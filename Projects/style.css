@@ -1,0 +1,574 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #0a0a1a; /* Warna sesuai permintaan */
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.section-divider {
+  width: 100%;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.1);
+
+  margin: 0;
+}
+
+/* Navbar */
+nav {
+  background: linear-gradient(to right, #1a001a, #0d0d0d, #2b0000);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  top: 0;
+  box-shadow: 0 0 10px rgba(148, 0, 211, 0.5);
+}
+
+.logo {
+  font-size: 1.8rem;
+  color: #f6f6f6;
+  text-shadow: 0 0 10px #8549bc;
+  font-weight: 700;
+  font-family: "Kanit", sans-serif;
+}
+
+.nav-links {
+  list-style: none; /* Ini yang hilangkan titik */
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li {
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  font-size: 0.95rem;
+  font-family: "Kanit", sans-serif;
+  opacity: 0.85;
+  color: #ffffff;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  transition: opacity 0.3s, transform 0.2s;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -5px;
+  background: #a855f7;
+  transition: width 0.3s;
+}
+
+.nav-links a:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links i {
+  color: #c084fc;
+  width: 18px;
+  height: 18px;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background: #fff;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 30px;
+    background-color: #1a001a;
+    border: 1px solid #a855f7;
+    padding: 15px;
+    border-radius: 8px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+/* SECTION 1 - Hero Section */
+.projects-hero {
+  padding: 200px 20px 100px;
+  text-align: center;
+  background-color: #100026;
+  color: #fff;
+  animation: heroEnter 1.2s ease-out;
+  position: relative;
+  z-index: 1;
+}
+
+.projects-hero h1 {
+  font-size: 2.8rem;
+  color: #c084fc;
+  margin-bottom: 16px;
+  text-shadow: 0 0 12px #c084fc88;
+  animation: textPop 1s ease forwards;
+}
+
+.projects-hero p {
+  font-size: 1.1rem;
+  color: #ccc;
+  margin-bottom: 30px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.projects-hero .cta-button {
+  background: #c084fc;
+  color: #fff;
+  padding: 12px 26px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+  text-decoration: none;
+  animation: fadeIn 2.4s ease-in-out;
+}
+
+.projects-hero .cta-button:hover {
+  background: #a855f7;
+  box-shadow: 0 0 16px #c084fc66;
+  transform: translateY(-2px);
+}
+
+/* Garis bawah dekoratif */
+.projects-hero::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #c084fc;
+  margin: 30px auto 0;
+  border-radius: 4px;
+  animation: pulseLine 2s infinite ease-in-out;
+}
+
+/* Animations */
+@keyframes heroEnter {
+  0% {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes textPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pulseLine {
+  0%,
+  100% {
+    opacity: 0.6;
+    transform: scaleX(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scaleX(1.5);
+  }
+}
+
+/* SECTION 2 - Category Buttons */
+.project-categories {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: #16052e;
+}
+
+.category-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 0px;
+  animation: fadeInUp 1.3s ease-out;
+  text-align: center;
+}
+
+/* Gaya default button */
+.category-buttons .category-btn {
+  padding: 10px 24px;
+  border: 2px solid white;
+  background-color: transparent;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+/* RESPONSIVE: tombol center di layar HP */
+@media (max-width: 768px) {
+  .category-buttons {
+    justify-content: center;
+  }
+
+  .category-buttons .category-btn {
+    width: 100%; /* Tombol full lebar */
+    max-width: 240px; /* Batas maksimal lebar tombol */
+  }
+}
+
+.category-btn {
+  padding: 10px 24px;
+  background-color: #1c1c2e;
+  border: 2px solid transparent;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.category-btn:hover {
+  background-color: #2e2e4d;
+  transform: scale(1.05);
+}
+
+.category-btn.active {
+  background-color: #c084fc;
+  color: #0f0f1a;
+  font-weight: bold;
+  border-color: #fff;
+  box-shadow: 0 0 12px #c084fc66;
+}
+
+.category-buttons button {
+  padding: 10px 20px;
+  background-color: #1a1a2e;
+  color: #fff;
+  border: 1px solid #3a3a5a;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.category-buttons button:hover,
+.category-buttons button.active {
+  background-color: #c084fc;
+  border-color: #c084fc;
+  color: #0a0a0a;
+}
+
+/* Optional responsive */
+@media (max-width: 768px) {
+  .projects-hero h1 {
+    font-size: 2rem;
+  }
+
+  .projects-hero p {
+    font-size: 1rem;
+  }
+
+  .category-buttons {
+    flex-direction: column;
+  }
+
+  .category-buttons button {
+    width: 100%;
+    max-width: 200px;
+  }
+}
+
+.projects-header {
+  text-align: center;
+  padding: 100px 20px 40px;
+  animation: fadeInUp 1s ease-out;
+}
+
+.projects-header h1 {
+  font-size: 3rem;
+  color: #c084fc;
+  margin-bottom: 10px;
+}
+
+.projects-header p {
+  color: #ccc;
+  font-size: 1.1rem;
+  animation: fadeIn 2s ease-out;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.projects-category {
+  background-color: #100026;
+  padding: 80px 20px;
+  text-align: center;
+  transition: all 0.4s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  display: none; /* default disembunyikan */
+}
+
+.projects-category.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.projects-category.show {
+  display: block;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.category-title h2 {
+  font-size: 2.4rem;
+  color: #c084fc;
+  margin-bottom: 10px;
+}
+
+.category-title p {
+  color: #ccc;
+  margin-bottom: 40px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-card {
+  background-color: #1a1a2e;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s;
+  box-shadow: 0 0 8px rgba(192, 132, 252, 0.1);
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 16px rgba(192, 132, 252, 0.3);
+}
+
+.project-card img.project-logo {
+  width: 100%;
+  height: auto;
+  max-height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.project-card h3 {
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.project-card .version,
+.project-card .creator {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-bottom: 4px;
+}
+
+.project-card .desc {
+  font-size: 0.95rem;
+  color: #ccc;
+  margin-bottom: 12px;
+}
+
+.project-card .download-btn {
+  display: inline-block;
+  background-color: #c084fc;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.project-card .download-btn:hover {
+  background-color: #a855f7;
+}
+
+.footer-section {
+  background: #0e0e1a;
+  color: #fff;
+  padding: 60px 20px 30px;
+  text-align: center;
+  border-top: 2px solid #c084fc44;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 40px;
+  max-width: 1200px;
+  margin-inline: auto;
+  text-align: left;
+}
+
+.footer-brand,
+.footer-contact,
+.footer-social {
+  flex: 1 1 250px;
+}
+
+.footer-brand h2 {
+  color: #c084fc;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.footer-contact h4,
+.footer-social h4 {
+  color: #c084fc;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.footer-contact p,
+.footer-brand p {
+  color: #ccc;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.footer-links {
+  flex: 1 1 200px;
+}
+
+.footer-links h4 {
+  color: #c084fc;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 8px;
+}
+
+.footer-links ul li a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+  color: #fff;
+}
+
+.social-icons {
+  display: flex;
+  gap: 16px;
+}
+
+.social-icons a {
+  color: #c084fc;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  border-top: 1px solid #2c2c3a;
+  padding-top: 20px;
+  font-size: 0.9rem;
+  color: #888;
+}

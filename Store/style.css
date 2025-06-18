@@ -1,0 +1,280 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #0a0a1a; /* Warna sesuai permintaan */
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Navbar */
+nav {
+  background: linear-gradient(to right, #1a001a, #0d0d0d, #2b0000);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  top: 0;
+  box-shadow: 0 0 10px rgba(148, 0, 211, 0.5);
+}
+
+.logo {
+  font-size: 1.8rem;
+  color: #f6f6f6;
+  text-shadow: 0 0 10px #8549bc;
+  font-weight: 700;
+  font-family: "Kanit", sans-serif;
+}
+
+.nav-links {
+  list-style: none; /* Ini yang hilangkan titik */
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li {
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  font-size: 0.95rem;
+  font-family: "Kanit", sans-serif;
+  opacity: 0.85;
+  color: #ffffff;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  transition: opacity 0.3s, transform 0.2s;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -5px;
+  background: #a855f7;
+  transition: width 0.3s;
+}
+
+.nav-links a:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links i {
+  color: #c084fc;
+  width: 18px;
+  height: 18px;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background: #fff;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 30px;
+    background-color: #1a001a;
+    border: 1px solid #a855f7;
+    padding: 15px;
+    border-radius: 8px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+.coming-soon-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0f0f1a;
+  overflow: hidden;
+  position: relative;
+  padding: 40px;
+}
+
+.coming-soon-container {
+  position: relative;
+  text-align: center;
+  color: white;
+  z-index: 2;
+}
+
+.glitch {
+  font-size: 3rem;
+  position: relative;
+  color: white;
+  animation: glitch 2s infinite;
+  text-shadow: 0 0 2px #f0f, 0 0 3px #0ff;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  background: transparent;
+}
+
+.glitch::before {
+  left: 2px;
+  text-shadow: -2px 0 red;
+  animation: glitchTop 2s infinite linear;
+}
+
+.glitch::after {
+  left: -2px;
+  text-shadow: -2px 0 blue;
+  animation: glitchBottom 2s infinite linear;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  opacity: 0.7;
+  margin-top: 10px;
+}
+
+.neon-circle-bg {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, #c084fc33, transparent);
+  border-radius: 50%;
+  animation: pulse 4s ease-in-out infinite;
+  z-index: 1;
+}
+
+.sparkle {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(white 1px, transparent 1px);
+  background-size: 20px 20px;
+  opacity: 0.1;
+  animation: sparkle 10s linear infinite;
+  z-index: 0;
+}
+
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes glitchTop {
+  0% {
+    clip: rect(0, 9999px, 0, 0);
+  }
+  50% {
+    clip: rect(0, 9999px, 80px, 0);
+  }
+  100% {
+    clip: rect(0, 9999px, 0, 0);
+  }
+}
+
+@keyframes glitchBottom {
+  0% {
+    clip: rect(0, 9999px, 0, 0);
+  }
+  50% {
+    clip: rect(85px, 9999px, 140px, 0);
+  }
+  100% {
+    clip: rect(0, 9999px, 0, 0);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+@keyframes sparkle {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100px 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .neon-title {
+    font-size: 2rem;
+  }
+
+  .glitch {
+    font-size: 2.2rem;
+  }
+}

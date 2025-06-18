@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZackCraft Studio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;0,500;0,700;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100...&family=WDXL+Lubrifont+JP+N&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/feather-icons"></script>
+  </head>
+  <body>
+    <header class="hero-section">
+      <div class="overlay">
+        <div class="hero-text">
+          <img src="images/1hearth.png" alt="Hearth Icon" class="hero-hearth" />
+          <div class="hero-line-1">ZACK CRAFT STUDIO</div>
+          <p>&nbsp;</p>
+          <div class="hero-description">
+            Nikmati Fitur Spesial Untuk Pengguna Dari ZackCraftStudio
+            Yang Kami Sediakan Berguna Bagi Server, World, Mod, Server,
+            Hosting Dan Lain Lain!
+            Semua Gratis. Download, Beres!
+          </div>
+          <a href="Projects/index.html" class="cta-button">Jelajahi Sekarang</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Color Transition -->
+    <div class="bottom-transition"></div>
+
+    <!-- Navbar -->
+    <nav>
+      <div class="logo">ZackCraft Studio</div>
+      <div class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="nav-links" id="navLinks">
+        <li>
+          <a href="#home" onclick="scrollToTop(event)"><i data-feather="home"></i> Home</a>
+        </li>
+        <li>
+          <a href="Projects/index.html"><i data-feather="box"></i> Projects</a>
+
+        </li>
+        <li>
+          <a href="Store/index.html"><i data-feather="shopping-bag"></i> Store</a>
+        </li>
+        <li>
+          <a href="About/index.html"><i data-feather="info"></i> About</a>
+        </li>
+        <li>
+          <a href="Kontak/"><i data-feather="mail"></i> Contact</a>
+        </li>
+      </div>
+    </nav>
+
+    <section class="about-section" id="about">
+      <div class="about-wrapper">
+        <div class="about-header">
+          <video
+            src="images/vlogo.mp4"
+            autoplay
+            muted
+            loop
+            playsinline
+            class="about-logo"
+          ></video>
+          <h2 class="about-title">ZackCraft Studio</h2>
+          <p class="about-subtitle">
+            Developer Plugin, Add-on & Minecraft Content Creator
+          </p>
+        </div>
+
+        <div class="about-description-box">
+          <p>
+            Kami adalah tim kreatif yang fokus mengembangkan plugin, membuat
+            addon, serta mendesain berbagai elemen untuk Minecraft. Selain itu,
+            kami juga aktif sebagai konten kreator yang menyajikan tutorial,
+            showcase, dan edukasi menarik.
+          </p>
+        </div>
+
+        <div class="skills-box">
+          <span class="skill-badge">Plugin Developer</span>
+          <span class="skill-badge">Addon Maker</span>
+          <span class="skill-badge">Designer</span>
+        </div>
+
+        <div class="about-links">
+          <a
+            href="https://www.youtube.com/@zakigamestop"
+            target="_blank"
+            class="link-btn youtube"
+          >
+            <i data-feather="youtube"></i> YouTube
+          </a>
+          <a
+            href="https://discord.gg/4jjKrxPq"
+            target="_blank"
+            class="link-btn discord"
+          >
+            <i data-feather="message-circle"></i> Discord
+          </a>
+        </div>
+      </div>
+    </section>
+    <div class="section-neon-border"></div>
+
+    <section class="showcase-section">
+      <h2 class="section-title">Fitur Dari Projects</h2>
+      <div class="project-cards">
+        <div class="card">
+          <h3>Plugin</h3>
+          <p>Banyak plugin yang sudah dibuat dengan kualitas premium!</p>
+        </div>
+        <div class="card">
+          <h3>Add-On</h3>
+          <p>Add-on Minecraft yang sangat menarik dan ringan digunakan.</p>
+        </div>
+        <div class="card">
+          <h3>Advanced Commands</h3>
+          <p>Pembuatan command sendiri dengan Plugin dan Add-On</p>
+        </div>
+      </div>
+      <!-- Statistik Langsung di Bawah Card -->
+      <div class="stats-inline">
+        <div class="stat-item">
+          <i data-feather="users"></i>
+          <div class="stat-text">
+            <h4>1,238</h4>
+            <p>Pelanggan Aktif</p>
+          </div>
+        </div>
+        <div class="stat-item">
+          <i data-feather="cpu"></i>
+          <div class="stat-text">
+            <h4>24/7</h4>
+            <p>Teknisi Online</p>
+          </div>
+        </div>
+        <div class="stat-item">
+          <i data-feather="server"></i>
+          <div class="stat-text">
+            <h4>12</h4>
+            <p>Admin Server</p>
+          </div>
+        </div>
+        <div class="stat-item">
+          <i data-feather="download"></i>
+          <div class="stat-text">
+            <h4>5,870</h4>
+            <p>Total Download</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonial-section">
+      <h2 class="section-title">Lihat Apa yang Mereka Katakan</h2>
+
+      <!-- Baris 1: 3 Testimoni -->
+      <div class="testimonial-row row-3">
+        <div class="testimonial-card">
+          <div class="user-avatar">
+            <img src="https://i.pravatar.cc/100?img=3" alt="@EnderCoder" />
+          </div>
+          <h4>@EnderCoder</h4>
+          <p class="comment-text">
+            <i data-feather="star"></i>
+            Sangat puas dengan layanan VPS dan plugin-nya, stabil dan cepat!
+          </p>
+          <span class="comment-date">10 Juni 2025</span>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="user-avatar">
+            <img src="https://i.pravatar.cc/100?img=15" alt="@CreeperX" />
+          </div>
+          <h4>@CreeperX</h4>
+          <p class="comment-text">
+            <i data-feather="heart"></i>
+            Plugin dari ZackCraft gampang diatur dan sangat membantu server
+            saya.
+          </p>
+          <span class="comment-date">8 Juni 2025</span>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="user-avatar">
+            <img src="https://i.pravatar.cc/100?img=10" alt="@SteveBuilder" />
+          </div>
+          <h4>@SteveBuilder</h4>
+          <p class="comment-text">
+            <i data-feather="zap"></i>
+            Pelayanannya responsif dan harga addon-nya worth it banget.
+          </p>
+          <span class="comment-date">7 Juni 2025</span>
+        </div>
+      </div>
+
+      <!-- Baris 2: 2 Testimoni - DITENGAH -->
+      <div class="testimonial-row row-2">
+        <div class="testimonial-card">
+          <div class="user-avatar">
+            <img src="https://i.pravatar.cc/100?img=22" alt="@RedstoneGirl" />
+          </div>
+          <h4>@RedstoneGirl</h4>
+          <p class="comment-text">
+            <i data-feather="thumbs-up"></i>
+            Desain webnya keren, support-nya sabar banget. GGWP!
+          </p>
+          <span class="comment-date">5 Juni 2025</span>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="user-avatar">
+            <img src="https://i.pravatar.cc/100?img=35" alt="@BlockMaster" />
+          </div>
+          <h4>@BlockMaster</h4>
+          <p class="comment-text">
+            <i data-feather="smile"></i>
+            Semua layanan ZackCraft sangat memuaskan. Pasti langganan terus!
+          </p>
+          <span class="comment-date">4 Juni 2025</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-neon-border"></div>
+
+    <section class="faq-section" id="faq">
+      <div class="faq-container">
+        <h2 class="faq-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <!-- FAQ Item -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <div class="question-text">
+                <i data-feather="help-circle"></i> Apa itu Minecraft?
+              </div>
+              <div class="faq-icon" data-icon>
+                <i data-feather="chevron-down"></i>
+              </div>
+            </button>
+            <div class="faq-answer">
+              Minecraft adalah game sandbox populer yang memungkinkan pemain
+              membangun dan mengeksplorasi dunia blok secara kreatif atau
+              bertahan hidup dengan tantangan.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <div class="question-text">
+                <i data-feather="shield"></i> Apakah GTStore sangat aman?
+              </div>
+              <div class="faq-icon" data-icon>
+                <i data-feather="chevron-down"></i>
+              </div>
+            </button>
+            <div class="faq-answer">
+              GTStore dibangun dengan sistem keamanan berlapis dan dukungan
+              aktif dari tim terpercaya untuk menjaga kenyamanan pengguna. Sayangnya,
+              Store ini masih dalam tahap pengembangan.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <div class="question-text">
+                <i data-feather="cpu"></i> Bagaimana dengan spek Virtual Private
+                Server yang diberikan?
+              </div>
+              <div class="faq-icon" data-icon>
+                <i data-feather="chevron-down"></i>
+              </div>
+            </button>
+            <div class="faq-answer">
+              Kami menyediakan VPS dengan spesifikasi fleksibel mulai dari 2GB
+              RAM hingga 32GB RAM, SSD NVMe, dan koneksi stabil.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <div class="question-text">
+                <i data-feather="gift"></i> Fitur unggulan dari plugin kami?
+              </div>
+              <div class="faq-icon" data-icon>
+                <i data-feather="chevron-down"></i>
+              </div>
+            </button>
+            <div class="faq-answer">
+              Beberapa fitur unggulan termasuk UI kustom, sistem otomatis,
+              integrasi API, dan dukungan penuh untuk server premium &
+              non-premium.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <div class="question-text">
+                <i data-feather="users"></i> Siapa tim di balik ZackCraft
+                Studio?
+              </div>
+              <div class="faq-icon" data-icon>
+                <i data-feather="chevron-down"></i>
+              </div>
+            </button>
+            <div class="faq-answer">
+              Kami adalah tim kreatif berisi developer plugin, addon creator,
+              designer, dan konten kreator Minecraft aktif.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer-section">
+      <footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <h2>ZackCraft Studio</h2>
+      <p>
+        Melayani plugin, addon, dan layanan Minecraft premium dengan kualitas terbaik.
+      </p>
+    </div>
+
+    <div class="footer-contact">
+      <h4>Kontak</h4>
+      <p>Email: gamestopbussines@gmail.com</p>
+      <p>Instagram : @officialgamestop.id</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Layanan</h4>
+      <ul>
+        <li><a href="#">Plugin Minecraft</a></li>
+        <li><a href="#">Add-On</a></li>
+        <li><a href="#">Custom Commands</a></li>
+        <li><a href="#">Paket Studio</a></li>
+      </ul>
+    </div>
+
+    <!-- Social section tetap paling kanan -->
+    <div class="footer-social">
+      <h4>Ikuti Kami</h4>
+      <div class="social-icons">
+        <a href="https://github.com/GamestopID29" target="_blank" aria-label="GitHub">
+          <i data-feather="github"></i>
+        </a>
+        <a href="https://instagram.com/officialgamestop.id" target="_blank" aria-label="Instagram">
+          <i data-feather="instagram"></i>
+        </a>
+        <a href="https://discord.gg/4jjKrxPq" target="_blank" aria-label="Discord">
+          <i data-feather="message-circle"></i>
+        </a>
+        <a href="https://youtube.com/@zakigamestop?si=HeNrqM8Z37V3zn8K" target="_blank" aria-label="YouTube">
+          <i data-feather="youtube"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Diletakkan di luar .footer-top agar tidak kena efek flex -->
+  <div class="footer-bottom">
+    <p>© 2025 ZackCraftStudio. All rights reserved</p>
+  </div>
+</footer>
+
+
+    <script src="script.js"></script>
+    <script>
+      feather.replace();
+    </script>
+  </body>
+</html>

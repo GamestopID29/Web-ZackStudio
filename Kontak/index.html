@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;0,500;0,700;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100...&family=WDXL+Lubrifont+JP+N&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/feather-icons"></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <div class="logo">ZackCraft Studio</div>
+      <div class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="nav-links" id="navLinks">
+        <li>
+          <a href="/index.html" onclick="scrollToTop(event)"
+            ><i data-feather="home"></i> Home</a
+          >
+        </li>
+        <li>
+          <a href="/Projects/index.html"><i data-feather="box"></i> Projects</a>
+        </li>
+        <li>
+          <a href="/Store/index.html"
+            ><i data-feather="shopping-bag"></i> Store</a
+          >
+        </li>
+        <li>
+          <a href="/About/index.html"><i data-feather="info"></i> About</a>
+        </li>
+        <li>
+          <a href="/Kontak/index.html"><i data-feather="mail"></i> Contact</a>
+        </li>
+      </div>
+    </nav>
+
+<!-- Terhubung Section -->
+<section class="connect-section">
+  <h2>Bagaimana Cara Terhubung Dengan Kami?</h2>
+  <p class="connect-subtitle">
+    Kami siap menyambut kamu di berbagai platform komunitas dan support!
+  </p>
+
+  <div class="connect-boxes">
+    <div class="connect-box discord" data-aos="fade-up" data-aos-delay="100">
+      <i data-feather="message-square"></i>
+      <h3>Discord</h3>
+      <p>
+        Bergabunglah dengan komunitas kami, diskusi, tanya jawab, dan update
+        plugin/addon terbaru.
+      </p>
+      <a
+        href="https://discord.gg/4jjKrxPq"
+        target="_blank"
+        class="connect-btn"
+        >Join Sekarang</a
+      >
+    </div>
+
+    <div class="connect-box whatsapp" data-aos="fade-up" data-aos-delay="200">
+      <i data-feather="phone-call"></i>
+      <h3>WhatsApp</h3>
+      <p>
+        Langsung ngobrol dengan tim kami melalui WhatsApp untuk pertanyaan cepat
+        dan bantuan langsung.
+      </p>
+      <a
+        href="https://whatsapp.com/channel/0029VbAXljG7j6g8yQRUE41c"
+        target="_blank"
+        class="connect-btn"
+        >Join Sekarang</a
+      >
+    </div>
+
+    <div class="connect-box instagram" data-aos="fade-up" data-aos-delay="300">
+      <i data-feather="youtube"></i>
+      <h3>YouTube</h3>
+      <p>
+        Dapatkan berita terbaru, cuplikan proyek, dan tips menarik seputar
+        dunia Minecraft dan dev!
+      </p>
+      <a
+        href="https://youtube.com/@zakigamestop?si=HeNrqM8Z37V3zn8"
+        target="_blank"
+        class="connect-btn"
+        >Lihat YouTube</a
+      >
+    </div>
+  </div>
+</section>
+
+
+    <footer class="footer-section">
+      <footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <h2>ZackCraft Studio</h2>
+      <p>
+        Melayani plugin, addon, dan layanan Minecraft premium dengan kualitas terbaik.
+      </p>
+    </div>
+
+    <div class="footer-contact">
+      <h4>Kontak</h4>
+      <p>Email: gamestopbussines@gmail.com</p>
+      <p>Instagram : @officialgamestop.id</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Layanan</h4>
+      <ul>
+        <li><a href="#">Plugin Minecraft</a></li>
+        <li><a href="#">Add-On</a></li>
+        <li><a href="#">Custom Commands</a></li>
+        <li><a href="#">Paket Studio</a></li>
+      </ul>
+    </div>
+
+    <!-- Social section tetap paling kanan -->
+    <div class="footer-social">
+      <h4>Ikuti Kami</h4>
+      <div class="social-icons">
+        <a href="https://github.com/GamestopID29" target="_blank" aria-label="GitHub">
+          <i data-feather="github"></i>
+        </a>
+        <a href="https://instagram.com/officialgamestop.id" target="_blank" aria-label="Instagram">
+          <i data-feather="instagram"></i>
+        </a>
+        <a href="https://discord.gg/4jjKrxPq" target="_blank" aria-label="Discord">
+          <i data-feather="message-circle"></i>
+        </a>
+        <a href="https://youtube.com/@zakigamestop?si=HeNrqM8Z37V3zn8K" target="_blank" aria-label="YouTube">
+          <i data-feather="youtube"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Diletakkan di luar .footer-top agar tidak kena efek flex -->
+  <div class="footer-bottom">
+    <p>© 2025 ZackCraftStudio. All rights reserved</p>
+  </div>
+</footer>
+
+    <script src="script.js"></script>
+    <script>
+      feather.replace();
+    </script>
+    <!-- AOS Animation -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ once: true, duration: 800 });
+</script>
+  </body>
+</html>
